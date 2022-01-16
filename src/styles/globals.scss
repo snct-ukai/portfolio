@@ -3,10 +3,22 @@ html{
   -webkit-text-size-adjust:100%;
   word-break:normal;
   -moz-tab-size:4;
-  tab-size:4}*,:after,:before{background-repeat:no-repeat;
-  box-sizing:inherit}:after,:before{text-decoration:inherit;
-  vertical-align:inherit}*{padding:0;
-  margin:0}hr{overflow:visible;
+  tab-size:4;
+}
+*,:after,:before{
+  background-repeat:no-repeat;
+  box-sizing:inherit
+}
+:after,:before{
+  text-decoration:inherit;
+  vertical-align:inherit
+}
+*{
+  padding:0;
+  margin:0
+}
+hr{
+  overflow:visible;
   height:0;
   color:inherit
 }
