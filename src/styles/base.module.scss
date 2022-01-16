@@ -1,20 +1,193 @@
 @import "./font";
+$defaultcolor: #606060;
 
-.header{
-  display: flex;
-  height: 231px;
-  align-items: flex-end;
-  padding: 0 179px;
-  .headerTitle{
-    @extend .eaves_regular;
-    font-size: 90px;
+.base{
+  .borderline{
+    text-decoration: underline;
   }
-  .headerLinks{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  a{
+    text-decoration: none;
+    color:$defaultcolor;
+  }
+
+  .header{
     display: flex;
-    height: auto;
-    .LinksChil{
+    height: 210px;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid $defaultcolor;
+
+    @media screen and(min-width:1920px) {
+      padding:0 179px;
+      padding-bottom: 55px;
+    }
+    @media screen and(max-width: 1920px) {
+      padding: 0 9.3%;
+      padding-bottom: 55px;
+    }
+    @media screen and(max-width:1280px) {
+      height:205px;
+    }
+    @media screen and(max-width: 960px) {
+      height: 60px;
+      padding-bottom: 0;
+    }
+
+    color: $defaultcolor;
+    .headerTitle h1{
       @extend .eaves_regular;
-      font-size: 48px;
+      font-size: 82px;
+
+      @media screen and(max-width:1280px) {
+        font-size: 72px;
+      }
+      @media screen and(max-width: 960px) {
+        font-size: 48px;
+      }
+    }
+
+    .headerLinks{
+      display: flex;
+      height: auto;
+      .LinksChil{
+        @extend .eaves_regular;
+        font-size: 44px;
+        @media screen and(max-width:1280px) {
+          font-size: 32px;
+        }
+        margin-left: 40px;
+      }
+    }
+  }
+
+  .footer{
+    height: 100px;
+    background-color: #f3f3f3;
+    margin-top: auto;
+    align-items: flex-end;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+
+    @media screen and(min-width:1920px) {
+      padding:0 179px;
+      padding-bottom: 28px;
+    }
+    @media screen and(max-width: 1920px) {
+      padding: 0 9.3%;
+      padding-bottom: 28px;
+    }
+    @media screen and(max-width:960px) {
+      justify-content: flex-end;
+      height: 50px;
+      padding-bottom: 14px;
+    }
+
+    .footerLinks{
+      display: flex;
+      @media screen and(max-width:960px) {
+        display: none;
+      }
+      font-size: 32px;
+      .LinksChil{
+        @extend .eaves_regular;
+        margin-right: 40px;
+      }
+    }
+
+    small{
+      @extend .eaves_book;
+      font-size: 16px;
+    }
+  }
+
+  .humburger{
+    background-color: rgb(34, 35, 36);
+    color: white;
+    padding: 10px 5px 0 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 60px;
+    width: 60px;
+    .open{
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      span {
+        background-color: white;
+        width: 30px;
+        height: 1px;
+        display: block;
+        margin-bottom: 7px;
+        &:nth-child(1) {
+          width: 20px;
+          margin-left: 10px;
+        }
+      }
+      p {
+        font-size: 13px;
+        margin-top: -4px;
+        margin-bottom: 5px;
+      }
+    }
+    .close {
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      span {
+        background-color: white;
+        width: 30px;
+        height: 1px;
+        display: block;
+        margin-bottom: 10px;
+        margin: 0 0 10px auto;
+        &:first-child {
+          transform: translateX(-10px) translateY(4px) rotate(150deg);
+        }
+        &:nth-child(2) {
+          transform: translateX(-10px) translateY(-8px) rotate(-150deg);
+          margin-bottom: 0;
+        }
+      }
+      p {
+        text-align: right;
+        font-size: 13px;
+        padding-right: 1px;
+      }
+    }
+  }
+
+  .drawerMenu {
+    width: 0;
+    color: white;
+    background-color: rgb(34, 35, 36);
+    display: flex none;
+    flex-direction: column;
+    width: 40vw;
+    min-width: 320px;
+    height: 100vh;
+    z-index: 100;
+    margin-left: auto;
+    &.open {
+      display: flex;
+    }
+    .LinksChil{
+      border-bottom:1px solid #f3f3f3;
+      padding: 10px;
+      padding-left: 20px;
+      a{
+        font-size: 32px;
+        color: white;
+      }
     }
   }
 }
