@@ -1,9 +1,15 @@
 import { NextPage } from "next";
-import DefaultErrorPage from 'next/error';
+import basestyles from '../styles/Home.module.scss'
+import Head from '../components/Head'
 
 const NotFound : NextPage = () => {
   return(
-    <DefaultErrorPage statusCode={404}/>
+    <div className={basestyles.container}>
+      <Head/>
+      <main className={basestyles.main}>
+        <h2>404エラー|ページが見つかりません</h2>
+      </main>
+    </div>
   )
 }
 
