@@ -132,6 +132,7 @@ $defaultcolor: #606060;
         }
       }
       p {
+        @extend .eaves_regular;
         font-size: 13px;
         margin-top: -4px;
         margin-bottom: 5px;
@@ -159,6 +160,7 @@ $defaultcolor: #606060;
         }
       }
       p {
+        @extend .eaves_regular;
         text-align: right;
         font-size: 13px;
         padding-right: 1px;
@@ -177,6 +179,7 @@ $defaultcolor: #606060;
     height: 100vh;
     z-index: 100;
     margin-left: auto;
+    @extend .eaves_regular;
     &.open {
       display: flex;
     }
