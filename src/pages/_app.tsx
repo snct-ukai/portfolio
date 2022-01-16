@@ -12,7 +12,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     if(process.browser){
       adobeLoader(document);
     }
-  },[router])
+  },[])
+
+  useEffect(() => {},[router])
 
   return (
     <Layout route={router.pathname}>
