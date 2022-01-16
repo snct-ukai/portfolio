@@ -1,0 +1,20 @@
+@import "./font";
+
+.header{
+  display: flex;
+  height: 231px;
+  align-items: flex-end;
+  padding: 0 179px;
+  .headerTitle{
+    @extend .eaves_regular;
+    font-size: 90px;
+  }
+  .headerLinks{
+    display: flex;
+    height: auto;
+    .LinksChil{
+      @extend .eaves_regular;
+      font-size: 48px;
+    }
+  }
+}
