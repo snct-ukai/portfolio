@@ -35,5 +35,6 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
 src/functions/sql-config.ts
-src/functions/adobeloader.ts
+src/functions/adobeloader.js
