@@ -1,0 +1,87 @@
+@import "./font";
+$defaultcolor: #606060;
+
+.main{
+  color: $defaultcolor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 125px;
+  margin-bottom: 70px;
+  @media screen and(max-width:960px) {
+    padding-top: 70px;
+  }
+  .myName{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 58px;
+    
+    @media screen and(max-width: 960px) {
+      align-items: center;
+    }
+    
+    .Name{
+      display: flex;
+      align-items: flex-end;
+      @media screen and(max-width: 960px) {
+        flex-direction: column;
+      }
+      padding: 12px 0;
+    }
+    .JPname{
+      @extend .minamoto_normal;
+      font-size: 3.75em;
+      margin: 0 35px;
+      @media screen and(max-width: 960px) {
+        font-size: 3em;
+        margin-right: 0;
+      }
+    }
+    .ENname{
+      @extend .eaves_regular;
+      @media screen and(max-width: 960px) {
+        font-size: 3em;
+        margin-left: 35px;
+      }
+      font-size: 3em;
+    }
+    .Image{
+      max-width: 152px;
+      width: 20%;
+      height: auto;
+      img{
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .Text{
+    @extend .minamoto_light;
+    font-size: 2em;
+    padding:0 35px;
+    @media screen and(max-width:960px) {
+      font-size: 1.3em;
+    }
+  }
+
+  .Links{
+    margin-top: 35px;
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+    .LinkIcon{
+      width: 32px;
+      height: auto;
+      object-fit: contain;
+      margin: 0 20px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
