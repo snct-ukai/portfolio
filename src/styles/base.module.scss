@@ -178,7 +178,9 @@ $defaultcolor: #606060;
     min-width: 320px;
     height: 100vh;
     z-index: 100;
-    margin-left: auto;
+    position: fixed;
+    top: 60px;
+    right: 0;
     @extend .eaves_regular;
     &.open {
       display: flex;
