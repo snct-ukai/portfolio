@@ -2,6 +2,7 @@ import { config } from "./sql-config";
 import { mainPage } from "../classes/mainPage";
 import { myLifeEvent } from "../classes/lifeEvent";
 import { skill_work } from "../classes/skill-work";
+import { About } from "../classes/about";
 import * as mysql from "mysql2/promise";
 
 export async function getMainPage(){
@@ -60,6 +61,18 @@ export async function getWorks(){
     skills.push(new skill_work("work", row["title"], row["Text"], row["picture_path"], row["id"]));
   }
   return skills;
+}
+
+export async function getAbout(){
+  const connection = await mysql.createConnection(config);
+  const sql = "SELECT * FROM aboutPage";
+  const [rows, _fields] = await connection.execute(sql);
+  connection.end();
+  if((rows as any)[0]){
+    const data = rows as any;
+    return new About(data["aboutMe"], data["detail"], data["id"]);
+  }
+  return;
 }
 
 export type mode = "skill" | "work"

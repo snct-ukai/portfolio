@@ -1,4 +1,4 @@
-import type { GetServerSideProps, NextPage, GetStaticProps } from 'next'
+import type { GetStaticProps } from 'next'
 import Head from '../components/Head'
 import styles from '../styles/Home.module.scss'
 import { useRouter } from 'next/router'
