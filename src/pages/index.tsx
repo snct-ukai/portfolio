@@ -1,4 +1,4 @@
-import type { GetServerSideProps, NextPage } from 'next'
+import type { GetServerSideProps, NextPage, GetStaticProps } from 'next'
 import Head from '../components/Head'
 import styles from '../styles/Home.module.scss'
 import { useRouter } from 'next/router'
@@ -65,7 +65,7 @@ const Home = (props : Props) => {
 
 export default Home
 
-export const getServerSideProps: GetServerSideProps = async() =>{
+export const getStaticProps: GetStaticProps = async() =>{
   const getprops = await getMainPage();
 
   if(getprops){
@@ -74,7 +74,8 @@ export const getServerSideProps: GetServerSideProps = async() =>{
         JPname : getprops.getJPname(),
         ENname : getprops.getENname(),
         Text : getprops.getText()
-      }
+      },
+      revalidate: 300,
     }
   }
   else{
