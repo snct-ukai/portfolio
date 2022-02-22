@@ -43,11 +43,11 @@ const Layout = ({route, children} : Props) =>{
                   <a>Skills</a>
                 </Link>
               </div>
-              <div className={blogstyle}>
+              {/*<div className={blogstyle}>
                 <Link href="/blog">
                   <a>Blog</a>
                 </Link>
-              </div>
+              </div>*/}
             </div>) : (
             <div className={styles.humburger}>
               <div className={`${!isOpen ? styles.open : styles.close}`} onClick={() => menuFunction()}>
@@ -77,11 +77,11 @@ const Layout = ({route, children} : Props) =>{
                 <a>Skills</a>
               </Link>
             </div>
-            <div className={blogstyle} onClick={() => setIsOpen(false)}>
+            {/*<div className={blogstyle} onClick={() => setIsOpen(false)}>
               <Link href="/blog">
                 <a>Blog</a>
               </Link>
-            </div>
+            </div>*/}
         </div>
       </div>
       )}
@@ -105,11 +105,11 @@ const Layout = ({route, children} : Props) =>{
                 <a>Skills</a>
               </Link>
             </div>
-            <div className={blogstyle}>
+            {/*<div className={blogstyle}>
               <Link href="/blog">
                 <a>Blog</a>
               </Link>
-            </div>
+            </div>*/}
         </div>
         <div className={styles.copyright}>
           <small>&copy;2022 Ukai Shota</small>
