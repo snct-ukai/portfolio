@@ -1,6 +1,3 @@
-import * as mysql from "mysql2/promise";
-import { config } from "../functions/sql-config";
-
 export class myLifeEvent{
   private id : number = 0;
   private year : number;
@@ -10,20 +7,6 @@ export class myLifeEvent{
     this.year = year;
     this.Text = Text;
     this.id = id || this.id;
-  }
-
-  public async update(){
-    const connection = await mysql.createConnection(config);
-    try{
-      const sql = "UPDATE my_life_event SET year = ?, Text = ? WHERE id = ?";
-      await connection.execute(sql, [this.year, this.Text, this.id]);
-      connection.end();
-      return true;
-    }
-    catch(_err){
-      connection.end();
-      return false;
-    }
   }
 
   public setYear(year : number){
