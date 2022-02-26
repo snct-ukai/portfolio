@@ -3,16 +3,23 @@ import Head from "../components/Head";
 import styles from "../styles/About.module.scss";
 import { getAbout, getEvents, getMainPage } from "../functions/functions";
 import { myLifeEvent } from "../classes/lifeEvent";
+import { Text } from "../components/Text"
 
 type Props = {
   aboutMe : string,
   detail : string,
   JPname : string,
   Enname : string,
-  events : myLifeEvent[]
+  myEventsYears : number[],
+  myEventTexts : string[]
 }
-
+/* eslint-disable */
 const about = (props : Props) => {
+  const events : myLifeEvent[] = [];
+  for(let i = 0; i < props.myEventTexts.length; i++){
+    events.push(new myLifeEvent(props.myEventsYears[i], props.myEventTexts[i]))
+  }
+
   return(
     <div>
       <Head/>
@@ -25,7 +32,7 @@ const about = (props : Props) => {
             <div className={styles.aboutMe}>
               <div className={styles.myName}>
                 <div className={styles.Image}>
-                  <img src={"/icon/icoon.png"} alt="icon"/>
+                  <img src={"/icon/icon.png"} alt="icon"/>
                 </div>
                 <div className={styles.Name}>
                   <div className={styles.JPname}>
@@ -37,9 +44,9 @@ const about = (props : Props) => {
                 </div>
               </div>
               <div className={styles.myEventTable}>
-                {props.events.map( (value)=> {
+                {events.map( (value)=> {
                   return(
-                    <div className={styles.event}>
+                    <div key={"event"} className={styles.event}>
                       <div className={styles.eventYear}>
                         <p>{value.getYear()}</p>
                       </div>
@@ -51,6 +58,12 @@ const about = (props : Props) => {
                 })}
               </div>
             </div>
+            <div className={styles.aboutMe}>
+              <Text text={props.aboutMe}/>
+            </div>
+          </div>
+          <div className={styles.detail}>
+            <Text text={props.detail}/>
           </div>
         </div>
       </main>
@@ -71,7 +84,12 @@ export const getStaticProps: GetStaticProps = async() =>{
       detail : getprops.getDetail(),
       JPname : getMainPageProps.getJPname(),
       ENname : getMainPageProps.getENname(),
-      myEvents : events
+      myEventsYears : events.map(value => {
+        return value.getYear();
+      }),
+      myEventTexts : events.map(value=>{
+        return value.getText();
+      })
     },
     revalidate: 300,
   }:{
