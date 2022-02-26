@@ -39,3 +39,6 @@ yarn-error.log*
 src/functions/sql-config.ts
 src/functions/adobeloader.js
 public/icon/icon.png
+
+public/main
+public/about
