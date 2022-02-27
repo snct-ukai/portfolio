@@ -19,7 +19,7 @@ export async function getMainPage(){
     const path : string = data["path"];
     const id : number = data["id"];
     try{
-      const Text = fs.readFileSync(`./public/main/${path}`, 'utf8');
+      const Text = fs.readFileSync(`./public/data/main/${path}`, 'utf8');
 
       return new mainPage(JPname, ENname, Text, id);
     }
@@ -92,8 +92,8 @@ export async function getAbout(){
     console.log(`aboutMe:${aboutMepath}\ndetailPath:${detailPath}`)
 
     try{
-      const aboutMe = fs.readFileSync(`./public/about/${aboutMepath}`, 'utf8');
-      const detail = fs.readFileSync(`./public/about/${detailPath}`, 'utf8');
+      const aboutMe = fs.readFileSync(`./public/data/about/${aboutMepath}`, 'utf8');
+      const detail = fs.readFileSync(`./public/data/about/${detailPath}`, 'utf8');
       return new About(aboutMe, detail, data["id"]);
     }
     catch(err){
