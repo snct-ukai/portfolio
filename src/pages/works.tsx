@@ -2,6 +2,8 @@ import { GetStaticProps } from "next";
 import { getWorks } from "../functions/functions";
 import Head from "../components/Head"
 import { skill_work } from "../classes/skill-work";
+import styles from "../styles/works.module.scss"
+import { Text } from "../components/Text"
 
 type Props = {
   num : number,
@@ -9,7 +11,7 @@ type Props = {
   texts : string[],
   pic_paths : string[],
 }
-
+/* eslint-disable */
 const works = (props : Props) => {
   const works : skill_work[] = []
   for(let i = 0; i < props.num; i++){
@@ -20,7 +22,27 @@ const works = (props : Props) => {
     <div>
       <Head/>
       <main>
-
+        <div className={styles.main}>
+          <div className={styles.pageName}>
+            <p>Works</p>
+          </div>
+          <div className={styles.container}>
+            {
+              works.map(element => {
+                return (
+                  <div key="" className={styles.child}>
+                    <div className={styles.pic}>
+                      <img src={`/data/works/${element.getPic_path()}`}/>
+                    </div>
+                    <div className={styles.detail}>
+                      <Text text={element.getText()}/>
+                    </div>
+                  </div>
+                )
+              })
+            }
+          </div>
+        </div>
       </main>
     </div>
   )
