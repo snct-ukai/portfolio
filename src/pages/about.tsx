@@ -30,21 +30,21 @@ const about = (props : Props) => {
           </div>
           <div className={styles.top}>
             <div className={styles.aboutMe}>
-              <div className={styles.myName}>
-                <div className={styles.Image}>
-                  <img src={"/icon/icon.png"} alt="icon"/>
-                </div>
+              <div className={styles.Image}>
+                <img src={"/icon/icon.png"} alt="icon"/>
+              </div>
+              <div className={styles.profile}>
                 <div className={styles.Name}>
                   <div className={styles.JPname}>
                     <p>{props.JPname}</p>
                   </div>
                   <div className={styles.ENname}>
-                    <p>{props.ENname}</p>
+                    <p>({props.ENname})</p>
                   </div>
                 </div>
-              </div>
-              <div className={styles.profile}>
-                <Text text={props.aboutMe}/>
+                <div className={styles.text}>
+                  <Text text={props.aboutMe}/>
+                </div>
               </div>
             </div>
             <div className={styles.myEventTable}>
@@ -52,7 +52,7 @@ const about = (props : Props) => {
                 return(
                   <div key={value.getId()} className={styles.event}>
                     <div className={styles.eventYear}>
-                      <p>{value.getYear()}</p>
+                      <p>{value.getYear()}年</p>
                     </div>
                     <div className={styles.eventDetail}>
                       <p>{value.getText()}</p>
