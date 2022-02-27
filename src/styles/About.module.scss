@@ -1,3 +1,75 @@
 @import "./font";
 $defaultcolor: #606060;
 
+.main{
+  @extend .minamoto_light;
+  color: $defaultcolor;
+  text-align: center;
+  .pageName{
+    @extend .eaves_book;
+    font-size: 5.625em;
+    p{
+      text-decoration: underline;
+      text-decoration-thickness: 5px;
+    }
+  }
+  .top{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    .Image{
+      max-width: 114px;
+      height: auto;
+      margin-right: 35px;
+      img{
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        @media screen and(max-width: 1676px) {
+          margin-top: 6px;
+        }
+      }
+      @media screen and(max-width: 1048px) {
+        display: none;
+      }
+    }
+    .aboutMe{
+      width: 36%;
+      margin-left: 10%;
+      margin-right: 4%;
+      display: flex;
+      padding-bottom: 58px;
+
+      .profile{
+        .Name{
+          display: flex;
+          align-items: flex-end;
+          padding: 12px 0;
+          @media screen and(max-width: 1676px) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 0;
+          }
+        }
+        .JPname{
+          @extend .minamoto_normal;
+          font-size: 3.375em;
+          margin-right: 35px;
+          @media screen and (max-width: 1676px) {
+            margin: 0;
+          }
+          @media screen and(max-width: 1048px) {
+            font-size: 3em;
+          }
+        }
+        .ENname{
+          @extend .eaves_regular;
+          font-size: 2.625em;
+        }
+        .text{
+          font-size: 1.65em;
+        }
+      }
+    }
+  }
+}
