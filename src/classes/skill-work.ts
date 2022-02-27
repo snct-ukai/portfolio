@@ -1,5 +1,3 @@
-import * as mysql from "mysql2/promise";
-import { config } from "../functions/sql-config";
 import { mode } from "../functions/functions";
 
 export class skill_work{
@@ -15,20 +13,6 @@ export class skill_work{
     this.Text = Text;
     this.pic_path = pic_path;
     this.id = id || this.id;
-  }
-
-  public async update(){
-    const connection = await mysql.createConnection(config);
-    try{
-      const sql = "UPDATE ? SET title = ?, Text = ?, picture_path = ? WHERE id = ?";
-      await connection.execute(sql, [this.mode, this.title, this.Text, this.pic_path]);
-      connection.end();
-      return true;
-    }
-    catch(_err){
-      connection.end()
-      return false;
-    }
   }
 
   public setTitle(title : string){

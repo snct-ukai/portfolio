@@ -10,7 +10,7 @@ type Props = {
   ENname : string,
   Text : string
 }
-
+/* eslint-disable */
 const Home = (props : Props) => {
   const router = useRouter();
 
