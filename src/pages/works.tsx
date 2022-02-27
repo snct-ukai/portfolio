@@ -32,7 +32,7 @@ const works = (props : Props) => {
                 return (
                   <div key="" className={styles.child}>
                     <div className={styles.pic}>
-                      <img src={`/data/works/${element.getPic_path()}`}/>
+                      <img src={`/data/works/${element.getPic_path()}`} alt={element.getTitle()}/>
                     </div>
                     <div className={styles.detail}>
                       <Text text={element.getText()}/>
