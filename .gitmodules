@@ -1,0 +1,4 @@
+[submodule "data"]
+	path = public/data
+	url = https://github.com/snct-ukai/portfolio_data
+	branch = main
