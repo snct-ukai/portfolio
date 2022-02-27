@@ -9,7 +9,7 @@ type Props = {
   aboutMe : string,
   detail : string,
   JPname : string,
-  Enname : string,
+  ENname : string,
   myEventsYears : number[],
   myEventTexts : string[]
 }
@@ -30,36 +30,36 @@ const about = (props : Props) => {
           </div>
           <div className={styles.top}>
             <div className={styles.aboutMe}>
-              <div className={styles.myName}>
-                <div className={styles.Image}>
-                  <img src={"/icon/icon.png"} alt="icon"/>
-                </div>
+              <div className={styles.Image}>
+                <img src={"/icon/icon.png"} alt="icon"/>
+              </div>
+              <div className={styles.profile}>
                 <div className={styles.Name}>
                   <div className={styles.JPname}>
                     <p>{props.JPname}</p>
                   </div>
                   <div className={styles.ENname}>
-                    <p>{props.Enname}</p>
+                    <p>({props.ENname})</p>
                   </div>
                 </div>
-              </div>
-              <div className={styles.myEventTable}>
-                {events.map( (value)=> {
-                  return(
-                    <div key={"event"} className={styles.event}>
-                      <div className={styles.eventYear}>
-                        <p>{value.getYear()}</p>
-                      </div>
-                      <div className={styles.eventDetail}>
-                        <p>{value.getText()}</p>
-                      </div>
-                    </div>
-                  )
-                })}
+                <div className={styles.text}>
+                  <Text text={props.aboutMe}/>
+                </div>
               </div>
             </div>
-            <div className={styles.aboutMe}>
-              <Text text={props.aboutMe}/>
+            <div className={styles.myEventTable}>
+              {events.map( (value)=> {
+                return(
+                  <div key={value.getId()} className={styles.event}>
+                    <div className={styles.eventYear}>
+                      <p>{value.getYear()}年</p>
+                    </div>
+                    <div className={styles.eventDetail}>
+                      <p>{value.getText()}</p>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
           <div className={styles.detail}>

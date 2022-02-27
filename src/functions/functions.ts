@@ -64,7 +64,7 @@ export async function getSkills(){
 
 export async function getWorks(){
   const connection = await mysql.createConnection(config);
-  const sql = "SELECT * FROM skills";
+  const sql = "SELECT * FROM works";
   const [rows, _fields] = await connection.execute(sql);
   connection.end();
 
