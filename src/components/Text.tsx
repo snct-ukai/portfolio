@@ -3,13 +3,15 @@ export const Text = (props:{text : string}) => {
 
   return(
     <div key={"Text"}>
+      <p>
       {
         str.map(element => {
           return(
-            <p key={"Text p"}>{element}</p>
+            <span key="">{element}<br/></span>
           )
         })
       }
+      </p>
     </div>
   )
 }
