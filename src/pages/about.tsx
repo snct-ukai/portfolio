@@ -31,7 +31,7 @@ const about = (props : Props) => {
           <div className={styles.top}>
             <div className={styles.aboutMe}>
               <div className={styles.Image}>
-                <img src={"/icon/icon.png"} alt="icon"/>
+                <img src={"/icon/icon.webp"} alt="icon"/>
               </div>
               <div className={styles.profile}>
                 <div className={styles.Name}>
