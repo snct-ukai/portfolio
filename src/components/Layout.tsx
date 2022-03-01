@@ -13,6 +13,7 @@ const Layout = ({route, children} : Props) =>{
   const worksstyle = `${styles.LinksChil}` + ` ${route =="/works" ? styles.borderline : {}}`
   const skillsstyle = `${styles.LinksChil}` + ` ${route =="/skills" ? styles.borderline : {}}`
   const blogstyle = `${styles.LinksChil}` + ` ${route =="/blog" ? styles.borderline : {}}`
+  const rootstyle = `${styles.LinksChil}` + ` ${(route == "/" || route == "/index") ? styles.borderline : {}}`
   const { width } = getWindowSize();
   const [isOpen, setIsOpen] = useState(false);
   const menuFunction = () => setIsOpen(!isOpen);
@@ -62,6 +63,11 @@ const Layout = ({route, children} : Props) =>{
       (isOpen&&width<=960)&&(
       <div className={`${styles.drawerMenu} ${isOpen ? styles.open : undefined}`}>
         <div className={styles.footerLinks}>
+            <div className={rootstyle} onClick={() => setIsOpen(false)}>
+              <Link href="/">
+                <a>Top</a>
+              </Link>
+            </div>
             <div className={aboutstyle} onClick={() => setIsOpen(false)}>
               <Link href="/about">
                 <a>About</a>
