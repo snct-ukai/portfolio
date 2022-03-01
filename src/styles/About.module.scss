@@ -9,6 +9,10 @@ $defaultcolor: #606060;
     @extend .eaves_book;
     font-size: 5.625em;
     margin: 140px 0;
+    @media screen and(max-width: 480px) {
+      font-size: 3.75em;
+      margin: 70px 0;
+    }
     p{
       text-decoration: underline;
       text-decoration-thickness: 5px;
@@ -63,19 +67,31 @@ $defaultcolor: #606060;
           @media screen and(max-width: 1048px) {
             font-size: 3em;
           }
+          @media screen and(max-width: 480px) {
+            font-size: 2em;
+          }
         }
         .ENname{
           @extend .eaves_regular;
           font-size: 2.625em;
+          @media screen and(max-width: 480px) {
+            font-size: 1.7em;
+          }
         }
         .text{
           font-size: 1.65em;
+          @media screen and(max-width: 480px) {
+            font-size: 1.05em;
+          }
         }
       }
     }
     .myEventTable{
       padding-top: 50px;
       font-size: 1.65em;
+      @media screen and(max-width: 480px) {
+        font-size: 1.05em;
+      }
       display: flex;
       flex-direction: column;
       width: 36%;
@@ -105,6 +121,7 @@ $defaultcolor: #606060;
         padding-top: 0;
         padding-bottom: 58px;
       }
+      margin-bottom: 0;
     }
   }
   .detail{
@@ -114,5 +131,9 @@ $defaultcolor: #606060;
     max-width: 1920px;
     margin: auto;
     margin-bottom: 140px;
+    @media screen and(max-width: 480px) {
+      font-size: 0.9em;
+      margin-bottom: 70px;
+    }
   }
 }
