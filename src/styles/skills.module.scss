@@ -1,2 +1,57 @@
 @import "./font";
 $defaultcolor: #606060;
+
+.main{
+  @extend .minamoto_light;
+  color: $defaultcolor;
+  text-align: center;
+  .pageName{
+    @extend .eaves_book;
+    font-size: 5.625em;
+    margin: 140px 0;
+    @media screen and(max-width: 480px) {
+      font-size: 3.75em;
+      margin: 70px 0;
+    }
+    p{
+      text-decoration: underline;
+      text-decoration-thickness: 5px;
+    }
+  }
+  .container{
+    width: 100%;
+    max-width: 1728px;
+    margin-top: 30px;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 2%;
+    margin: auto;
+    .child{
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      width: 21%;
+      margin: 2%;
+      padding: 2%;
+      max-height: 200px;
+      .pic{
+        width: 100%;
+        img{
+            height: 150px;
+            width: 100%;
+            object-fit: contain;
+            background-color: white;
+        }
+      }
+      .detail{
+        width: 100%;
+        margin-top: 20px;
+      }
+      margin-bottom: 35px;
+    }
+    margin-bottom: 140px;
+  }
+}
