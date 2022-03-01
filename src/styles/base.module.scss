@@ -105,7 +105,7 @@ $defaultcolor: #606060;
   }
 
   .humburger{
-    background-color: rgb(34, 35, 36);
+    background-color: $defaultcolor;
     color: white;
     padding: 10px 5px 0 5px;
     cursor: pointer;
@@ -171,7 +171,7 @@ $defaultcolor: #606060;
   .drawerMenu {
     width: 0;
     color: white;
-    background-color: rgb(34, 35, 36);
+    background-color: $defaultcolor;
     display: flex none;
     flex-direction: column;
     width: 40vw;
