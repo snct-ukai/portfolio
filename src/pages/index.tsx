@@ -21,7 +21,7 @@ const Home = (props : Props) => {
         <div className={styles.main}>
           <div className={styles.myName}>
             <div className={styles.Image}>
-              <img src={"/icon/icon.png"} alt="icon"/>
+              <img src={"/icon/icon.webp"} alt="icon"/>
             </div>
             <div className={styles.Name}>
               <div className={styles.JPname}>
