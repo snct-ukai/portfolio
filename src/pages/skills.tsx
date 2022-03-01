@@ -22,6 +22,7 @@ const skills = (props : Props) => {
     <div>
       <Head/>
       <main>
+        <div className={styles.main}>
           <div className={styles.pageName}>
             <p>Skills</p>
           </div>
@@ -41,6 +42,7 @@ const skills = (props : Props) => {
               })
             }
           </div>
+        </div>
       </main>
     </div>
   )
