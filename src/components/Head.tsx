@@ -15,6 +15,8 @@ const head = (props :{title?: string}) => {
       <meta property="og:description" content=" portfolio site created with nextJS" />
       <meta property="og:site_name" content="Ukai Shota" />
       <meta property="og:image" content="https://portfolio.snct-ukai.tk/icon/icon.webp" />
+
+      <meta httpEquiv="cache-control" content="max-age=31536000" />
     </Head>
   )
 }

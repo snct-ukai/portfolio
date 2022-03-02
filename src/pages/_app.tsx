@@ -9,9 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(()=>{
-    if(process.browser){
-      adobeLoader(document);
-    }
+    adobeLoader(document);
   },[])
 
   useEffect(() => {},[router])
