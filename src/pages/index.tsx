@@ -21,7 +21,7 @@ const Home = (props : Props) => {
         <div className={styles.main}>
           <div className={styles.myName}>
             <div className={styles.Image}>
-              <img src={"/icon/icon.webp"} alt="icon"/>
+              <img src={"/icon/icon.webp"} width="384" height="384" alt="icon"/>
             </div>
             <div className={styles.Name}>
               <div className={styles.JPname}>
@@ -38,22 +38,22 @@ const Home = (props : Props) => {
           <div className={styles.Links}>
             <div className={styles.LinkIcon}>
               <a href="https://github.com/snct-ukai" target="_blank" rel="noopener noreferrer">
-                <img src={"/LinkIcon/GitHub.png"} alt="GitHub"/>
+                <img src={"/LinkIcon/GitHub.png"} width="32" height="32" alt="GitHub"/>
               </a>
             </div>
             <div className={styles.LinkIcon}>
               <a href="https://twitter.com/ukai_0417" target="_blank" rel="noopener noreferrer">
-                <img src={"/LinkIcon/twitter.svg"} alt="twitter"/>
+                <img src={"/LinkIcon/twitter.svg"} width="32" height="32" alt="twitter"/>
               </a>
             </div>
             <div className={styles.LinkIcon}>
               <a href="https://www.instagram.com/ukai_0417" target="_blank" rel="noopener noreferrer">
-                <img src={"/LinkIcon/Instagram.png"} alt="Instagram"/>
+                <img src={"/LinkIcon/Instagram.png"} width="32" height="32" alt="Instagram"/>
               </a>
             </div>
             <div className={styles.LinkIcon}>
               <a href="https://qiita.com/snct-ukai" target="_blank" rel="noopener noreferrer">
-                <img src={"/LinkIcon/qiita.png"} alt="qiita"/>
+                <img src={"/LinkIcon/qiita.png"} width="32" height="32" alt="qiita"/>
               </a>
             </div>
           </div>

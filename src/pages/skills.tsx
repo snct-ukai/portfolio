@@ -32,7 +32,7 @@ const skills = (props : Props) => {
                 return (
                   <div key="" className={styles.child}>
                     <div className={styles.pic}>
-                      <img src={`/data/skills/${element.getPic_path()}`} alt={element.getTitle()}/>
+                      <img src={`/data/skills/${element.getPic_path()}`} width="403" height="200" alt={element.getTitle()}/>
                     </div>
                     <div className={styles.detail}>
                       <Text text={element.getTitle()}/>
