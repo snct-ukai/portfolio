@@ -56,6 +56,11 @@ const Home = (props : Props) => {
                 <img src={"/LinkIcon/qiita.png"} width="32" height="32" alt="qiita"/>
               </a>
             </div>
+            <div className={styles.LinkIcon}>
+              <a href="https://www.facebook.com/profile.php?id=100054641797333" target="_blank" rel="noopener noreferrer">
+                <img src={"/LinkIcon/facebook.png"} width="32" height="32" alt="facebook"/>
+              </a>
+            </div>
           </div>
         </div>
       </main>
