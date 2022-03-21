@@ -7,7 +7,7 @@ const head = (props :{title?: string}) => {
       <title>{title}</title>
       <meta name="description" content="This site is portfolio of Ukai Shota" />
       <meta name="viewport" content="width=device-width"/>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/icon/icon.webp" />
       
       <meta property="og:url" content="https://portfolio.snct-ukai.tk" />
       <meta property="og:type" content=" portfolio" />
