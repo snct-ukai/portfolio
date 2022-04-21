@@ -11,7 +11,7 @@
     "@types/mysql": "^2.15.21",
     "mysql2": "^2.3.3",
     "mysql2-promise": "^0.1.4",
-    "next": "12.1.4",
+    "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "sass": "^1.50.0"
